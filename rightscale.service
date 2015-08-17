@@ -1,0 +1,12 @@
+[Unit]
+Description=rightscale
+After=network.target
+Requires=network.target
+
+[Service]
+Type=oneshot
+ExecStart=/opt/rightscale/bin/rightscale_start
+ExecStop=/opt/rightscale/bin/rightscale_stop
+
+[Install]
+WantedBy=multi-user.target
